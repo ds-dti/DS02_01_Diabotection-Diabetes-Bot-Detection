@@ -1,0 +1,13 @@
+User Journey :
+
+Personal Use
+1. Pengguna bisa membuka aplikasi melalui website di alamat feelfree10.pythonanywhere.com atau telegram dengan id @Diabotection
+2. Lalu masukkan data Riwayat Kehamilan/Pregnancies, Weight, Height, dan Age sesuai dengan dengan format yang diminta.
+3. Setelah itu tekan Predict dan aplikasi akan memberikan hasil prediksi sesuai dengan data yang diberikan.
+
+Medical Use
+1. Pasien datang ke apotik/laboratorium untuk dilakukan pengecekan dengan alat medis.
+2. Pihak Apotik/Laboratorium bisa membuka aplikasi melalui website di alamat feelfree10.pythonanywhere.com atau telegram dengan id @Diabotection.
+3. Lalu masukkan data sesuai dengan hasil cek medis dan sesuai dengan format yang diminta.
+4. Setelah itu tekan Predict dan aplikasi akan memberikan hasil prediksi sesuai dengan data yang diberikan.
+

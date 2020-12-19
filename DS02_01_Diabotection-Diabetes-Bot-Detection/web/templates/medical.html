@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Diabetes Detection </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style media="screen">
+      /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+      .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+      }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+      .card-img-top {
+          width: 100%;
+          height: 15vw;
+          object-fit: cover;
+      }
+      .card-text {
+          width: 100%;
+          height: 10vw;
+          object-fit: cover;
+      }
+      .card-title {
+          width: 100%;
+          height: 3vw;
+          object-fit: cover;
+      }
+    }
+    </style>
+  </head>
+  <body>
+
+ <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="/">Diabetes Bot Detection</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/personal">Personal Use</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/medical">Medical Use</a>
+                  </li>
+                </ul>
+                <!--<span class="navbar-text">-->
+                <!--  Navbar text with an inline element-->
+                <!--</span>-->
+              </div>
+            </div>
+        </nav>
+
+<div class="container">
+  <br>
+  <center><h1>Diabetes Bot Detection</h1></center>
+  <br>
+
+  <div class="row">
+   <div class="col-sm-3">
+    <form action="{{ url_for('medical')}}" method="post">
+
+        <script>
+        function disableTxt() {
+          document.getElementById("pregnancies").readOnly = true;
+        }
+
+        function enbTxt() {
+          document.getElementById("pregnancies").readOnly = false;
+        }
+        </script>
+
+        <div class="form-group">
+          <label >Jenis Kelamin </label>
+          <br>
+          <input type="radio" id="male" onclick="disableTxt()" name="gender" value="male" onclick="disableTxt()">
+  	        <label for="male" onclick="disableTxt()">Pria</label><br>
+          <input type="radio" onclick="enbTxt()" id="female" name="gender" value="female">
+  	        <label for="female" onclick="enbTxt()" >Wanita</label>
+        </div>
+
+        <div class="form-group">
+          <label >Riwayat Kehamilan (Unit) : </label>
+          <input id="pregnancies" type="number" class="form-control" name="pregnancies" placeholder="" value="0">
+        </div>
+
+
+        <div class="form-group">
+          <label >Berat Badan (Kg) :</label>
+          <input type="number" class="form-control" name="weight" placeholder="" value="0">
+        </div>
+
+        <div class="form-group">
+          <label >Tinggi Badan (Cm) :</label>
+          <input type="number" class="form-control" name="height" placeholder="" value="0">
+        </div>
+
+    </div>
+
+
+   <div class="col-sm-3">
+
+    <div class="form-group">
+          <label >Tingkat Konsentrasi Glukosa Plasma pada 2 Jam dalam Oral Glucose Tolerance Test (GTIT) : </label>
+          <input type="number" class="form-control" name="glucose" placeholder="" value="0">
+    </div>
+
+    <div class="form-group">
+          <label >Tekanan Darah Diastolik (mm Hg) :</label>
+          <input type="number" class="form-control" name="bloodpressure" placeholder="" value="0">
+    </div>
+
+    <div class="form-group">
+      <label >Tingkat Ketebalan Kulit Trisep (mm)</label>
+      <input type="number" class="form-control" name="skinthickness" placeholder="" value="0">
+    </div>
+
+    <!--<div class="form-group">-->
+    <!--  <label >2-Hour Serum Insulin (Uh/ml)</label>-->
+    <!--  <input type="number" class="form-control" name="insulin" placeholder="" value="0">-->
+    <!--</div>-->
+        <!--<input type="hidden" class="form-control" name="insulin" placeholder="" value="0">-->
+        <!--<input type="hidden" class="form-control" name="dbf" placeholder="" value="0">-->
+
+    <!--<div class="form-group">-->
+    <!--  <label >DiabetesPedigreeFunction :</label>-->
+    <!--  <input type="number" class="form-control" name="dbf" placeholder="" value="0">-->
+    <!--</div>-->
+
+    <div class="form-group">
+      <label >Umur (Tahun) :</label>
+      <input type="number" class="form-control" name="age" placeholder="" value="0">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+
+  <div class="col-sm-6">
+      <!-- start card -->
+      <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Bagaimana cara hasil didapatkan
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                Sistem Deteksi kecenderungan memiliki diabetes berdasarkan algoritma machine learning dengan tingkat akurasi sebesar 84%.
+                <br>Berdasarkan perhitungan tersebut maka akan didapatkan hasil kecenderungan untuk memiliki atau tidak menderita diabetes.
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      {% if name is defined: %}
+      <div class="card">
+        <div class="card-header">
+          The Result
+        </div>
+        {% if name == 0: %}
+        <div class="card-body bg-success">
+        {% else: %}
+        <div class="card-body bg-warning">
+        {% endif %}
+          <blockquote class="blockquote mb-0">
+            {% if name == 0: %}
+            <div class="p-3 mb-2 text-white">
+               Anda tidak memiliki kecenderungan memiliki diabetes.
+                <br>Tetap jaga kesehatan anda dengan baik
+              </div>
+            {% else: %}
+            <div class="p-3 mb-2 text-white">
+               Anda memiliki kecenderungan memiliki diabetes.
+                <br>Harap lakukan pemeriksaan medis ke Dokter Spesialis atau Rumah Sakit Terdekat.
+              </div>
+            {% endif %}
+          </blockquote>
+        </div>
+      </div>
+      {% endif %}
+      <!-- end card -->
+  </div>
+</div>
+</div>
+<!-- end container 1 -->
+<br>
+
+{% if name is defined: %}
+<div class="container">
+  <center><h1>Artikel</h1></center>
+  <div class="card-group">
+
+    <!-- start artikel positif -->
+    {% if name == 1: %}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='images/hellosehat.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Cara Mengontrol Gula Darah</h5>
+        <p class="card-text">
+            Kunci hidup sehat dan normal untuk mengatasi diabetes adalah dengan mengontrol kadar gula darah dalam batas normal.
+        </p>
+        <a href="https://hellosehat.com/diabetes/cara-mengontrol-gula-darah/" class="btn btn-primary">Selengkapnya....</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='images/healthkompas.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">4 Tips Pola Makan Sehat Untuk Penderita Diabetes</h5>
+        <p class="card-text">
+          Menjaga pola makan adalah cara terbaik untuk mengelola gejala diabetes dan menghindari komplikasi yang mungkin terjadi.
+        </p>
+        <a href="https://health.kompas.com/read/2020/09/15/133337268/4-tips-pola-makan-sehat-untuk-penderita-diabetes?page=all" class="btn btn-primary">
+            Selengkapnya....</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='images/klikdokter.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Tips Tetap Sehat Dan Aktif Walau Kena Diabetes</h5>
+        <p class="card-text">
+          Menjadi penderita diabetes bukan berarti Anda membatasi aktivitas sehari-hari. Sebaliknya, Anda tetap harus aktif sembari menjalani pola hidup lebih sehat yang konsisten.
+        </p>
+        <a href="https://www.klikdokter.com/info-sehat/read/3381340/tips-tetap-sehat-dan-aktif-walau-kena-diabetes" class="btn btn-primary">
+            Selengkapnya....</a>
+      </div>
+    </div>
+    <!-- end artikel positif -->
+
+    <!-- start artikel negatif -->
+    {% else: %}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='images/tropicana.jpeg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Tips Mencegah Diabetes Sejak Usia Muda</h5>
+        <p class="card-text">
+            Dikutip dari Centers for Disease Control and Prevention, pencegahan diabetes dapat dilakukan dengan pola hidup sehat seperti pola makan sehat, menjaga berat badan dalam batas normal, dan tetap aktif bergerak.
+        </p>
+        <a href="https://health.detik.com/berita-detikhealth/d-5097795/tips-mencegah-diabetes-sejak-usia-muda" class="btn btn-primary">
+            Selengkapnya....</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='images/ketahui-cara-mencegah-diabetes-yang-tepat-di-sini-alodokter.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ketahui Cara Mencegah Diabetes yang Tepat di Sini</h5>
+        <p class="card-text">
+          Cara mencegah diabetes penting untuk diterapkan oleh siapa saja. Hal ini mengingat jumlah penderita diabetes yang kian meningkat setiap tahunnya.
+        </p>
+        <a href="https://www.alodokter.com/ketahui-cara-mencegah-diabetes-yang-tepat-di-sini" class="btn btn-primary">Selengkapnya....</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='images/apple diabetes_0.jpg')}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">5 Buah yang Baik Dikonsumsi untuk Mencegah Diabetes</h5>
+        <p class="card-text">
+           Setengah juta orang Tionghoa dewasa pengidap diabetes di Tiongkok (RRC) selama 7 tahun yang rutin makan buah akan mengalami penurunan risiko kerusakan pembuluh darah dan kematian akibat diabetes.
+        </p>
+        <a href="https://www.cigna.co.id/health-wellness/buah-mencegah-diabetes" class="btn btn-primary">Selengkapnya....</a>
+      </div>
+    </div>
+    <!-- end artikel negatif -->
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+<!-- start footer -->
+<!-- <div class="container">
+  footer
+</div> -->
+<!-- end footer -->
+</body>
+</html>

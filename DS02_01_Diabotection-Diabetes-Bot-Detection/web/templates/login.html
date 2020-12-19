@@ -1,0 +1,37 @@
+
+<form action="{{ url_for("login")}}" method="post">
+<label >Pregnancies :</label>
+<input type="number" name="pregnancies" placeholder="">
+<br><br>
+<label >Glucose :</label>
+<input type="number" name="glucose" placeholder="">
+<br><br>
+<label >BloodPressure :</label>
+<input type="number" name="bloodpressure" placeholder="">
+<br><br>
+<label >SkinThickness :</label>
+<input type="number" name="skinthickness" placeholder="">
+<br><br>
+<label >Insulin :</label>
+<input type="number" name="insulin" placeholder="">
+<br><br>
+<label >BMI :</label>
+<input type="number" name="bmi" placeholder="">
+<br><br>
+<label >DiabtesPedigreeFunction :</label>
+<input type="number" name="dbf" placeholder="">
+<br><br>
+<label >Age :</label>
+<input type="number" name="age" placeholder="">
+<br><br>
+<button type="submit">Predict</button>
+
+<!-- <h3>The prediction : {{ name }}<h3> -->
+
+{% if name is defined: %}
+  {% if name == 0: %}
+    <h3>The prediction : False <h3>
+  {% else: %}
+    <h3>The prediction : True <h3>
+  {% endif %}
+{% endif %}
