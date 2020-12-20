@@ -1,6 +1,9 @@
 
 # Diabotection (Diabetes Bot Detection) 
 
+![poster](https://user-images.githubusercontent.com/38289866/102718758-635b3880-431c-11eb-9d63-735902f27cdb.jpg)
+
+
 Merupakan sistem deteksi dini kejadian diabetes berdasarkan beberapa variabel terkait. 
 
 Sistem ini menggunakan platform berbasis web dan juga telegram sebagai salah satu aplikasi yang aktif digunakan di Indonesia.
