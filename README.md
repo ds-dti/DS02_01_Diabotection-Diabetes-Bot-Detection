@@ -41,7 +41,8 @@ Selain bisa menggunakan telegram bot kamu juga bisa mengaksesnya dengan mengguna
 ## Berikut adalah contoh penggunaannya
 
 
-![contoh_bot](https://user-images.githubusercontent.com/38289866/102519526-2ba68380-40c5-11eb-8378-5a2fbdcd4779.jpg)
+![25933](https://user-images.githubusercontent.com/38289866/102787705-1470da00-43d4-11eb-8264-8c5e53e2c631.jpg)
+
 
 ![Screenshot (138)](https://user-images.githubusercontent.com/38289866/102519352-f5690400-40c4-11eb-8b3f-4660ac4824c9.png)
 
