@@ -1,7 +1,9 @@
 
 # Diabotection (Diabetes Bot Detection) 
 
-![poster](https://user-images.githubusercontent.com/38289866/102718758-635b3880-431c-11eb-9d63-735902f27cdb.jpg)
+![poster](https://user-images.githubusercontent.com/38289866/102773540-00b97980-43bc-11eb-92eb-867dfa9c4e3b.jpg)
+
+Link Video : https://youtu.be/5fnXrqXjYlY
 
 
 Merupakan sistem deteksi dini kejadian diabetes berdasarkan beberapa variabel terkait. 
