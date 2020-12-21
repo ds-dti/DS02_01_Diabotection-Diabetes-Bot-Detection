@@ -79,5 +79,8 @@ Salam,
 > https://health.detik.com/berita-detikhealth/d-5097795/tips-mencegah-diabetes-sejak-usia-muda
 > https://www.alodokter.com/ketahui-cara-mencegah-diabetes-yang-tepat-di-sini
 > https://www.cigna.co.id/health-wellness/buah-mencegah-diabetes
+> https://lifestyle.bisnis.com/read/20170428/106/649107/2040-penderita-diabetes-di-indonesia-diprediksi-162-juta
+> https://beritagar.id/artikel/berita/bpjs-keluar-rp61-triliun-untuk-tangani-diabetes
 
-
+Illustration
+> https://undraw.co/61e1859c-67e9-4f73-acc6-13e624e79992
