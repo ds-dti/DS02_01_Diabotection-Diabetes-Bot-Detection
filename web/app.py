@@ -29,16 +29,15 @@ df.loc[(df['Outcome'] == 1 ) & (df['SkinThickness'].isnull()), 'SkinThickness'] 
 df.loc[(df['Outcome'] == 0 ) & (df['BMI'].isnull()), 'BMI'] = 30.1
 df.loc[(df['Outcome'] == 1 ) & (df['BMI'].isnull()), 'BMI'] = 34.3
 
-x = df.drop(['Outcome','Insulin','DiabetesPedigreeFunction'], axis=1)
-y = df['Outcome']
 # mdl = KNeighborsClassifier(n_neighbors=7)
 # model = Pipeline([('scaler', StandardScaler()), ('mdl', mdl)])
 # model.fit(x, y)
 # pickle.dump(model, open('model.pkl','wb'))
 # model = pickle.load(open('model.pkl','rb'))
 
+
 def personal_predict(preg,bmi,age):
-    mdl_ = KNeighborsClassifier(n_neighbors=7)
+    mdl_ = KNeighborsClassifier(n_neighbors=32)
     model_ = Pipeline([('scaler', StandardScaler()), ('mdl', mdl_)])
     x = df[['Pregnancies','BMI','Age']]
     y = df['Outcome']
@@ -47,9 +46,11 @@ def personal_predict(preg,bmi,age):
     return model_.predict([x_pred,x_pred])[0]
 
 def medical_predict(preg,glu,blp,skn,bmi,age):
-    rfo = RandomForestClassifier(max_depth= 15, min_samples_leaf= 5,
+    x = df.drop(['Outcome','Insulin','DiabetesPedigreeFunction'], axis=1)
+    y = df['Outcome']
+    mdl_ = RandomForestClassifier(max_depth= 15, min_samples_leaf= 5,
                              min_samples_split= 15, n_estimators= 100,random_state=260)
-    model = Pipeline([('scaler', StandardScaler()), ('mdl', rfo)])
+    model = Pipeline([('scaler', StandardScaler()), ('mdl', mdl_)])
     model.fit(x, y)
     x_pred = [preg,glu,blp,skn,bmi,age]
     return model.predict([x_pred,x_pred])[0]
@@ -74,6 +75,7 @@ def medical():
             bmi=0
         age = int(request.form.get('age'))
         pre = medical_predict(preg,glu,blp,skn,bmi,age)
+
         # return f'{f}'
         return render_template('medical.html', name=pre)
     return render_template('medical.html')

@@ -14,7 +14,7 @@ Sistem ini menggunakan platform berbasis web dan juga telegram sebagai salah sat
 
 Diabotection terbagi menjadi 2 layanan yaitu personal use untuk pengunaan individu dan juga medical use untuk penggunaan apotik atau laboratorium.
 
-Diabotection dikembangkan dengan menggunakan algoritma machine learning dengan akurasi sebesar 84% untuk medical use dan 77% untuk personal use. 
+Diabotection dikembangkan dengan menggunakan algoritma machine learning dengan akurasi sebesar 86% untuk medical use dan 77% untuk personal use. 
 
 ## Cara Penggunaan Bot
 
@@ -66,3 +66,18 @@ Salam,
 - Kendra Veren Widya Arista
 - Rizqi Prima Hariadhy
 - Mohammad Rosidi (Mentor)
+
+
+#Resource
+##Dataset
+https://www.kaggle.com/uciml/pima-indians-diabetes-database
+
+##Artikel
+https://hellosehat.com/diabetes/cara-mengontrol-gula-darah/
+https://health.kompas.com/read/2020/09/15/133337268/4-tips-pola-makan-sehat-untuk-penderita-diabetes?page=all
+https://www.klikdokter.com/info-sehat/read/3381340/tips-tetap-sehat-dan-aktif-walau-kena-diabetes
+https://health.detik.com/berita-detikhealth/d-5097795/tips-mencegah-diabetes-sejak-usia-muda
+https://www.alodokter.com/ketahui-cara-mencegah-diabetes-yang-tepat-di-sini
+https://www.cigna.co.id/health-wellness/buah-mencegah-diabetes
+
+

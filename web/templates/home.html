@@ -7,6 +7,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
   </head>
   <body>
 
@@ -35,28 +38,114 @@
             </div>
         </nav>
 
+            <style media="screen">
+                /* Medium Devices, Desktops */
+              @media only screen and (min-width : 992px) {
+                .mrtop{
+                  margin-top: -60px;
+                }
 
-    <div class="container">
-        <br>
-      <div class="row">
+              }
+
+              /* Large Devices, Wide Screens */
+              @media only screen and (min-width : 1200px) {
+                .mrtop{
+                  margin-top: -60px;
+                }
+
+              }
+              </style>
+
+    <div class="container mrtop">
+      <section class="jumbotron text-center bg-transparent">
+        <center><img src="{{url_for('static', filename='images/undraw_breakfast_psiw.png')}}" class="img-fluid w-50 p-3" alt="Responsive image"></center>
+        <div class="container">
+          <h1 class="jumbotron-heading">Diabotection</h1>
+          <p class="lead text-dark">Adalah sistem deteksi kecenderungan memiliki diabetes berdasarkan beberapa variabel terkait.
+            <br>
+            Diabotection terbagi menjadi 2 layanan yaitu <b>personal use</b> untuk pengunaan individu dan juga <b>medical use</b> untuk penggunaan apotik atau laboratorium.
+            <br>
+            <br>
+            Diabotection dikembangkan dengan menggunakan algoritma machine learning dengan akurasi sebesar 84% untuk medical use dan 77% untuk personal use
+            <br>
+            <br>
+            Berdasarkan perhitungan dari masing masing algoritma maka akan didapatkan hasil kecenderungan untuk memiliki atau tidak memiliki diabetes.</p>
+            <br>
+            <h5 class="jumbotron-heading">Pilih Personal Use untuk penggunaan Individu atau <br> Medical Use jika kamu merupakan pihak dari laboratorium medis.</h5>
+          <p>
+            <br>
+            <a type="button" href="/personal" class="btn btn-info">Personal Use</a>
+            <br>
+            <br>
+            <a type="button" href="/medical" class="btn btn-success">Medical Use</a>
+            <!-- <a href="#" class="btn btn-primary my-2">Main call to action</a> -->
+            <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-transparent">
+        <div class="container mrtop">
+          <h2 class="jumbotron-heading text-center">Telegram @DiabotectionBot</h2>
+          <a class="text-center">Khusus untuk layanan Personal Use juga dapat diakses dengan menggunakan platform telegram dengan id @DiabotectionBot.</a>
+            <br>
+              <li>Cari bot di kolom search telegram dengan keyword @DiabotectionBot .</li>
+              <li>Lalu ketik "/predict" - untuk melakukan prediksi. </li>
+              <li>Setelah kamu mengetik /predict lalu masukkan data sesuai dengan instruksi dan format yang ditentukan lalu hasilnya akan keluar.</li>
+              <br>
+            <p>
+              Jika kamu ingin menggunakannya di aplikasi yang lain, kamu juga bisa menggunakan api berikut dengan mengganti nilai 10 sesuai dengan data digunakan
+              <br>
+              <br>
+              Untuk medical use
+              <br><a href='http://feelfree10.pythonanywhere.com/medical_api?pregnancies=10&glucose=10&bloodpressure=10&skinthickness=10&weight=10&height=10&age=10'>
+                http://feelfree10.pythonanywhere.com/medical_api?pregnancies=10&glucose=10&bloodpressure=10&skinthickness=10&weight=10&height=10&age=10 </a>
+              <br>
+              <br>
+              Untuk personal use
+              <br><a href='http://feelfree10.pythonanywhere.com/personal_api?pregnancies=10&weight=10&height=10&age=10'>
+                http://feelfree10.pythonanywhere.com/personal_api?pregnancies=10&weight=10&height=10&age=10</a>
+              <br>
+              <br>
+              Result bernilai 1 artinya memiliki kecenderungan untuk memiliki diabetes sedangkan jika bernilai 0 adalah sebaliknya.
+              <br>
+              <br>
+              <div class="text-center">
+              Sekian, Semoga Bermanfaat.
+              <br>
+              <br>
+              Salam,
+              <li>Aditya Ramadhan Moesya</li>
+              <li>Dinda Mareta Putriany</li>
+              <li>Kendra Veren Widya Arista</li>
+              <li>Rizqi Prima Hariadhy</li>
+              </div>
+              <br>
+            </p>
+        </div>
+      </section>
+
+
+
+        <!-- <br> -->
+      <!-- <div class="row">
         <div class="col text-center">
             <a type="button" href="/personal" class="btn btn-info">Personal Use</a>
-          <!--<button class="btn btn-default">Centered button</button>-->
         </div>
-      </div>
+      </div> -->
 
-        <br>
+        <!-- <br> -->
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col text-center">
             <a type="button" href="/medical" class="btn btn-success">Medical Use</a>
         </div>
-      </div>
+      </div> -->
 
     </div>
 
 
-
+    <!-- Sumber gambar : undraw.co -->
 
   </body>
 </html>
