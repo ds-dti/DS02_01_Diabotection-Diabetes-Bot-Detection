@@ -68,16 +68,16 @@ Salam,
 - Mohammad Rosidi (Mentor)
 
 
-#Resource
-##Dataset
-https://www.kaggle.com/uciml/pima-indians-diabetes-database
+# Resource
+## Dataset
+> https://www.kaggle.com/uciml/pima-indians-diabetes-database
 
-##Artikel
-https://hellosehat.com/diabetes/cara-mengontrol-gula-darah/
-https://health.kompas.com/read/2020/09/15/133337268/4-tips-pola-makan-sehat-untuk-penderita-diabetes?page=all
-https://www.klikdokter.com/info-sehat/read/3381340/tips-tetap-sehat-dan-aktif-walau-kena-diabetes
-https://health.detik.com/berita-detikhealth/d-5097795/tips-mencegah-diabetes-sejak-usia-muda
-https://www.alodokter.com/ketahui-cara-mencegah-diabetes-yang-tepat-di-sini
-https://www.cigna.co.id/health-wellness/buah-mencegah-diabetes
+## Artikel
+> https://hellosehat.com/diabetes/cara-mengontrol-gula-darah/
+> https://health.kompas.com/read/2020/09/15/133337268/4-tips-pola-makan-sehat-untuk-penderita-diabetes?page=all
+> https://www.klikdokter.com/info-sehat/read/3381340/tips-tetap-sehat-dan-aktif-walau-kena-diabetes
+> https://health.detik.com/berita-detikhealth/d-5097795/tips-mencegah-diabetes-sejak-usia-muda
+> https://www.alodokter.com/ketahui-cara-mencegah-diabetes-yang-tepat-di-sini
+> https://www.cigna.co.id/health-wellness/buah-mencegah-diabetes
 
 
